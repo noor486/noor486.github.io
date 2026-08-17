@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Noor Fatima</title>
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=2">
+<style>
+  .contact-form { max-width: 420px; margin: 32px auto 0; text-align: left; }
+  .contact-form label { display: block; font-size: 0.85rem; font-weight: 600; margin: 14px 0 4px; color: var(--text); }
+  .contact-form input, .contact-form textarea {
+    width: 100%; padding: 10px 12px; border: 1px solid #D8D8D4; border-radius: 8px;
+    font-family: 'Inter', sans-serif; font-size: 0.95rem; background: #fff;
+  }
+  .contact-form textarea { min-height: 110px; resize: vertical; }
+  .contact-form button {
+    margin-top: 18px; background: var(--main); color: #fff; border: none;
+    padding: 11px 24px; border-radius: 8px; font-size: 0.95rem; cursor: pointer;
+    font-family: 'Inter', sans-serif; font-weight: 600;
+  }
+  .contact-form button:hover { opacity: 0.9; }
+  .form-note { font-size: 0.8rem; color: #6b6b6b; margin-top: 10px; }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="brand">Noor Fatima</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="work.html">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<main style="text-align:center;">
+  <h1>Let's talk</h1>
+  <div class="accent-line" style="margin-left:auto;margin-right:auto;"></div>
+  <p class="claim">Training a model is easy. Shipping one is the job — and that's what I do.</p>
+
+  <!-- Real working contact form: replace YOUR_FORM_ID with your actual Formspree endpoint ID -->
+  <form class="contact-form" action="https://formspree.io/f/myegnekn" method="POST">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Your email</label>
+    <input type="email" id="email" name="_replyto" required>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <button type="submit">Send message</button>
+    <p class="form-note">Sends directly to my inbox — no account needed on your end.</p>
+  </form>
+
+  <h3 style="margin-top:40px;">Links</h3>
+  <p>
+    <a href="https://www.linkedin.com/in/noor-fatima-9a9a61399" target="_blank" rel="noopener">LinkedIn →</a><br>
+    <a href="https://github.com/noor486" target="_blank" rel="noopener">GitHub →</a><br>
+    <a href="Noor_Fatima_CV.pdf" target="_blank" rel="noopener">Download CV (PDF) →</a>
+  </p>
+
+  <h3 style="margin-top:40px;">Repos</h3>
+  <p>
+    <a href="https://github.com/EsarFatima/water-quality-check" target="_blank" rel="noopener">Water Potability →</a><br>
+    <a href="https://github.com/noor486/flyrank-ml-internship" target="_blank" rel="noopener">FlyRank ML Internship →</a>
+  </p>
+</main>
+
+<footer>© 2026 Noor Fatima · Built with plain HTML/CSS, hosted on GitHub Pages</footer>
+
+</body>
+</html>
