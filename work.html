@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Work — Noor Fatima</title>
+<meta name="description" content="Two real ML projects: a deployed Water Potability screening pipeline (ANN/CNN, Docker, AWS App Runner) and a content refresh priority model built for FlyRank.">
+<meta property="og:title" content="Work — Noor Fatima">
+<meta property="og:description" content="Two real projects, one finished and deployed, one in progress.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://noor486.github.io/work.html">
+<meta property="og:image" content="https://noor486.github.io/logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Work — Noor Fatima">
+<meta name="twitter:description" content="Two real projects, one finished and deployed, one in progress.">
+<meta name="twitter:image" content="https://noor486.github.io/logo.png">
+<link rel="icon" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=2">
+<!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KFENSHK89L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KFENSHK89L');
+</script>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="brand">Noor Fatima</a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="work.html" class="active">Work</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Work</h1>
+  <div class="accent-line"></div>
+
+  <div class="case-card" id="water-potability">
+    <span class="status-badge status-live">Finished &amp; deployed</span>
+    <h2>Water Potability Screening Pipeline</h2>
+
+    <h3>The problem</h3>
+    <p>Testing whether water is safe to drink usually depends on manual lab analysis — slow, and not something you can run constantly. A faster, automated way to screen water chemistry data and flag likely-unsafe samples means problems get caught sooner.</p>
+
+    <h3>What I did</h3>
+    <p>I built a full pipeline: ANN and CNN models, DVC for data versioning, MLflow for experiment tracking, Airflow for orchestration, all containerized with Docker and deployed on AWS App Runner behind a FastAPI backend with a Streamlit interface. The model's recall came out much higher than its precision — 76% vs. 37%. That wasn't engineered deliberately going in, but it's the right tradeoff here: missing unsafe water is worse than a false alarm.</p>
+
+    <img src="real_water_app.png" alt="Water Potability app: live screenshot showing Potable prediction, 92.07% confidence, and full input summary" loading="lazy">
+
+    <h3>What came of it</h3>
+    <p>A working, deployed screening pipeline, not just a trained model in a notebook. Accuracy: 67%, recall: 76%, precision: 37%. The numbers aren't perfect and I won't pretend otherwise — precision has real room to improve. But the pipeline runs end-to-end, from raw data through a live API and interface.</p>
+
+    <a href="https://github.com/EsarFatima/water-quality-check" class="cta-btn" target="_blank" rel="noopener">View the repo</a>
+  </div>
+
+  <div class="case-card" id="flyrank">
+    <span class="status-badge status-progress">In progress</span>
+    <h2>Content Refresh Priority Model (FlyRank Internship)</h2>
+
+    <h3>The problem</h3>
+    <p>Content teams often decide what to fix by guessing — refresh whatever's oldest, or whatever a manager happens to notice. When that guess is wrong, effort gets spent on a page that didn't need it, while a page actually losing real traffic keeps bleeding, unnoticed.</p>
+
+    <h3>What I did</h3>
+    <p>I built two ways of ranking which pages to fix first, so I'd have something honest to compare: a simple rule (flag old, still-visible pages) and a model trained to find patterns across several signals at once. I chose to test the model because the simple rule's failure mode is exactly the guessing problem above — it treats "old" as the whole story, when it isn't.</p>
+
+    <img src="real_flyrank_chart.png" alt="Mean CTR by position tier chart, real output from my FlyRank notebook" loading="lazy">
+
+    <h3>What came of it</h3>
+    <p>The simple rule picked the right page to fix first about 1 in 4 times. The model got it right roughly 3 out of 4 times — a 3x improvement in precision, tested honestly by holding entire clients out of training. This project is still in progress — the numbers above are from the starter dataset, not a finished capstone result yet.</p>
+
+    <a href="https://github.com/noor486/flyrank-ml-internship" class="cta-btn" target="_blank" rel="noopener">View the repo</a>
+  </div>
+
+  <div style="text-align:center; margin-top: 30px;">
+    <a href="contact.html" class="cta-btn">Email me to talk about this</a>
+  </div>
+</main>
+
+<footer>
+  © 2026 Noor Fatima · Built with plain HTML/CSS, hosted on GitHub Pages
+</footer>
+
+</body>
+</html>
